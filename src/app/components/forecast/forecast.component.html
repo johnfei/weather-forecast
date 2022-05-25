@@ -1,0 +1,16 @@
+<div id="forecast-container">
+  <h2 class="title">{{ location }} Forecast</h2>
+  <div class="item-container">
+    <div class="forecastday-container" *ngFor="let dayElement of forecastData">
+      <p>
+        <span class="weekday">{{ weekDays[dayElement.weekDay] }}</span>
+        <span class="date">{{ dayElement.date }}</span>
+      </p>
+      <img class="icon" src="{{ dayElement.icon }}" />
+      <p class="temperature">
+        {{ dayElement.maxtemp_c }} / {{ dayElement.mintemp_c }} °C
+      </p>
+      <p class="description">{{ dayElement.description }}</p>
+    </div>
+  </div>
+</div>
